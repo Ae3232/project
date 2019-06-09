@@ -1,0 +1,14 @@
+@import "helpers/reset.scss";
+@import "helpers/variables.scss";
+@import "helpers/fonts.scss";
+@import "helpers/base.scss";
+
+
+@import "../components/header/style.scss";
+@import "../components/intro/style.scss";
+@import "../components/sorting/style.scss";
+@import "../components/checkbox/style.scss";
+@import "../components/products/style.scss";
+@import "../components/select/style.scss";
+@import "../components/social/style.scss";
+@import "../components/footer/style.scss";

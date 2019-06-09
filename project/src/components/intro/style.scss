@@ -1,0 +1,36 @@
+.intro {
+	background: url(../img/bg_1.jpg) no-repeat center / cover;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+
+	&_title {
+		font-size: 28px;
+		margin-bottom: 20px;
+		@media screen and (min-width: 768px) {
+			font-size: 60px;
+		}
+	}
+	&_description {
+		font-size: 16px;
+		line-height: 24px;
+		margin: 0 auto;
+		@media screen and (min-width: 768px) {
+			font-size: 20px;
+			max-width: 600px;
+		}
+	}
+	&_arrow {
+		background: url(../img/arrow_down.png) no-repeat center;
+		width: 34px;
+		height: 22px;
+		position: absolute;
+		bottom: 47px;
+		left: 50%;
+    	transform: translateX(-50%);
+    	cursor: pointer;
+	}
+}

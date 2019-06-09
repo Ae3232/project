@@ -1,0 +1,41 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 1;
+	@media screen and (min-width: 768px){
+        padding: 40px 64px 0;
+    }  
+
+	&_logo {
+		min-width: 53px;
+	}
+	&_navigation-list {
+		display: flex;
+		align-items: center;
+	}
+	&_navigation-item {
+		&:not(:last-child) {
+			margin-right: 15px;
+
+			@media screen and (min-width: 768px) {
+				margin-right: 60px;
+			}
+		}
+	}
+	&_navigation-link {
+		min-width: 24px;
+		color: $general_text-color;
+		font-size: 18px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
