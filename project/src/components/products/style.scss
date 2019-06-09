@@ -1,12 +1,16 @@
 .products {
 	padding: 20px 15px;
 	@media screen and (min-width: 768px) {
-		padding: 80px 96px 250px;
+		padding: 80px 96px 186px;
 	}
 
 	&_list {
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
+		@media screen and (min-width: 768px) {
+			margin-right: -64px;
+		}
 	}
 	&_list-item {
 		$product_bg-color: #f5f6f7;
@@ -20,23 +24,23 @@
 		border: 6px solid $product_bg-color;
 		background-color: $product_bg-color;
 		box-sizing: border-box;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 64px;
+			}
+		}
+		&:hover {
+			border-color: #aa9b77;
+		}
 		@media screen and (min-width: 450px) {
 			width: 48.75%;
 			
 		}
 		@media screen and (min-width: 768px) {
 			width: 320px;
-		}
-
-		&:hover {
-			border-color: #aa9b77;
-		}
-		&:not(:last-child) {
-			margin-bottom: 15px;
-			@media screen and (min-width: 768px) {
-				margin-right: 64px;
-				margin-bottom: 64px;
-			}
+			margin-right: 64px;
 		}
 		&:not(:nth-child(2n+2)) {
 			@media screen and (min-width: 450px) {

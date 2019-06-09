@@ -400,15 +400,22 @@ a {
   padding: 20px 15px; }
   @media screen and (min-width: 768px) {
     .products {
-      padding: 80px 96px 250px; } }
+      padding: 80px 96px 186px; } }
   .products_list {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
+    @media screen and (min-width: 768px) {
+      .products_list {
+        margin-right: -64px; } }
   .products_list-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -430,20 +437,20 @@ a {
     background-color: #f5f6f7;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
+    .products_list-item:not(:last-child) {
+      margin-bottom: 15px; }
+      @media screen and (min-width: 768px) {
+        .products_list-item:not(:last-child) {
+          margin-bottom: 64px; } }
+    .products_list-item:hover {
+      border-color: #aa9b77; }
     @media screen and (min-width: 450px) {
       .products_list-item {
         width: 48.75%; } }
     @media screen and (min-width: 768px) {
       .products_list-item {
-        width: 320px; } }
-    .products_list-item:hover {
-      border-color: #aa9b77; }
-    .products_list-item:not(:last-child) {
-      margin-bottom: 15px; }
-      @media screen and (min-width: 768px) {
-        .products_list-item:not(:last-child) {
-          margin-right: 64px;
-          margin-bottom: 64px; } }
+        width: 320px;
+        margin-right: 64px; } }
     @media screen and (min-width: 450px) {
       .products_list-item:not(:nth-child(2n+2)) {
         margin-right: 2.5%; } }
@@ -519,7 +526,7 @@ a {
   .select_wrapper:after {
     content: '';
     position: absolute;
-    right: 0;
+    right: 17px;
     top: 2px;
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -536,7 +543,8 @@ a {
   border: 0;
   font-size: 16px;
   text-transform: uppercase;
-  width: 100%; }
+  width: 100%;
+  padding-right: 17px; }
 
 .social {
   padding: 20px 15px;

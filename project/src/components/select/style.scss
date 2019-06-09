@@ -7,7 +7,7 @@
     &:after {
       content: '';
       position: absolute;
-      right: 0;
+      right: 17px;
       top: 2px;
       transform: rotate(-45deg);
       border-left: 2px solid #000;
@@ -22,5 +22,6 @@
     font-size: 16px;
     text-transform: uppercase;
     width: 100%;
+    padding-right: 17px;
   }
 }
