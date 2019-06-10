@@ -33,7 +33,6 @@ gulp.task('code', function() {
 gulp.task('watch', function() {
     gulp.watch('src/*.scss', gulp.parallel('sass'));
     gulp.watch('src/*.html', gulp.parallel('code'));
-    gulp.watch(['src/js/common.js'], gulp.parallel('scripts'));
 });
 
 gulp.task('dev', gulp.parallel('sass', 'browser-sync', 'watch'));
