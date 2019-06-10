@@ -2,64 +2,73 @@ var app = angular.module("testTask", []);
 
 app.controller('productsCtrl', ['$scope', function ($scope) {
 	
-	$scope.data = {
-		"items": [
+	$scope.users = [
 		{
-			"type" : "Child",
+			"usertype" : "child",
 			"img" : "item1",
 			"price" : "3.20",
 			"name" : "T-SHIRT",
 			"options": ["Size", "S", "M", "L", "XL"]
 		}
 		,{
-			"type" : "Child",
+			"usertype" : "child",
 			"img" : "item2",
 			"price" : "13.30",
 			"name" : "Pants FORCLAZ",
 			"options": ["Size", "M", "XL"]
 		}
 		,{
-			"type" : "Men",
+			"usertype" : "men",
 			"img" : "item1",
 			"price" : "5.00",
 			"name" : "T-SHIRT",
 			"options": ["Size", "XL"]
 		}
 		,{
-			"type" : "Women",
+			"usertype" : "women",
 			"img" : "item2",
 			"price" : "3.21",
 			"name" : "T-SHIRT",
 			"options":  ["Size", "S", "M", "L", "XL"]
 		}
 		,{
-			"type" : "Women",
+			"usertype" : "women",
 			"img" : "item3",
 			"price" : "31",
 			"name" : "backpack",
 			"options": ["color", "red", "blue", "black"]
 		}
 		, {
-			"type" : "Other",
+			"usertype" : "other",
 			"img" : "item3",
 			"price" : "0",
 			"name" : "car",
 			"options": ["color", "red", "blue", "black"]
 		}
-  	]
-	};
-
-	$scope.showCategory = {
-			"men" : true,
+  	];
+    
+    $scope.filter = {
+            "men"   : true,
 			"women" : true,
-			"child": false
-	};
+			"child" : false
+    }
+    
+   
+    
+   $scope.filterByCategory  = function(user) {
+       var displayUser =  $scope.filter[user.usertype] || noFilter($scope.filter);
+       return displayUser;
+   };
 
-	$scope.changeFilter  = function (obj) {
-		return !$scope.showCategory[obj];
-	}
+
+    function noFilter(filterObj) {
+      return Object.
+        keys(filterObj).
+        every(function (key) { return !filterObj[key]; });
+    }                    
 
 }]);
+
 
 
 app.controller('menuCtrl', ['$scope', function ($scope) {

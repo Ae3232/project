@@ -44,23 +44,23 @@
         	<section class="sorting">
         		<div class="sorting_checkbox">
         			<div for="" class="checkbox">
-        				<input type="checkbox" ng-model="showCategory.men" id="checkbox_men" class="checkbox_image">
+        				<input type="checkbox" id="checkbox_men" class="checkbox_image" ng-model="filter['men']" >
         				<label class="checkbox_label" for="checkbox_men">MEN</label>
         			</div>
         			<div for="" class="checkbox">
-        				<input type="checkbox" ng-model="showCategory.women" id="checkbox_women" class="checkbox_image">
+        				<input type="checkbox" id="checkbox_women"  class="checkbox_image" ng-model="filter['women']">
         				<label class="checkbox_label" for="checkbox_women">women</label>
         			</div>
         			<div for="" class="checkbox">
-        				<input type="checkbox" ng-model="showCategory.child" id="checkbox_child" class="checkbox_image">
+        				<input type="checkbox" id="checkbox_child" class="checkbox_image" ng-model="filter['child']">
         				<label class="checkbox_label" for="checkbox_child">childRobotoren</label>
         			</div>
         		</div>
-        		<button class="sorting_btn">see all prodRobotoucts</button>
+        		<button class="sorting_btn" ng-click="uncheckAll()" >see all prodRobotoucts</button>
         	</section>
         	<section class="products">
         		<div class="products_list">
-        			<div class="products_list-item" type="{{item.type}}" ng-repeat="item in data.items">
+        			<div class="products_list-item" type="{{item.type}}" ng-repeat="item in users | filter : filterByCategory">
         				<div class="select">
         					<div class="select_wrapper">
 		        				<select class="select_item">
