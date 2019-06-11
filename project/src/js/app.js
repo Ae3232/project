@@ -53,10 +53,12 @@ app.controller('productsCtrl', ['$scope', function ($scope) {
 			"child" : false
     }
     
-   
-    
    $scope.filterByCategory  = function(user) {
-       var displayUser =  $scope.filter[user.usertype] || noFilter($scope.filter);
+       var displayUser;
+       if( user.usertype != 'other' ){
+           displayUser =  $scope.filter[user.usertype] || noFilter($scope.filter);    
+       }
+       
        return displayUser;
    };
 
