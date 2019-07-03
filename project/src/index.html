@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="testTask">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1.0;" class="">
@@ -7,99 +7,79 @@
 	    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
         <title>Project</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
-    	<script src="js/app.js"></script>
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <header class="header">
-        	<span class="header_logo"> <!-- span сделан для того, чтобы при необходимости заменить на ссылку -->
+        	<a href="" class="header_logo">
         		<img class="header_logo-img" src="img/logo.png" alt="">
-        	</span>
+        	</a>
 			<nav class="header_navigation">
 				<ul class="header_navigation-list">
 					<li class="header_navigation-item">
-						<a href="" class="header_navigation-link">Home</a>
+						<a href="" class="header_navigation-link">Tools</a>
+                        <ul class="header_submenu">
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Tools 1</a>
+                            </li>
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Tools 2</a>
+                            </li>
+                        </ul>
 					</li>
 					<li class="header_navigation-item">
 						<a href="" class="header_navigation-link">Products</a>
+                        <ul class="header_submenu">
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Products 1</a>
+                            </li>
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Products 2</a>
+                            </li>
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Products 3</a>
+                            </li>
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Products 4</a>
+                            </li>
+                        </ul>
 					</li>
 					<li class="header_navigation-item">
-						<a href="" class="header_navigation-link">
-							<img src="img/cart.png" alt="" class="header_navigation-img">
-						</a>
-					</li>
+                        <a href="" class="header_navigation-link">Help</a>
+                        <ul class="header_submenu">
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Settings</a>
+                            </li>
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">FAQ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_navigation-item">
+                        <a href="" class="header_navigation-link">Contacts</a>
+                        <ul class="header_submenu">
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">About us</a>
+                            </li>
+                            <li class="header_submenu-item">
+                                <a href="" class="header_submenu-link">Map</a>
+                            </li>
+                        </ul>
+                    </li>
 				</ul>
 			</nav>
+            <button class="header_btn"></button>
         </header>
-        <main class="main" ng-controller="productsCtrl">
-        	<section class="intro">
-        		<h1 class="intro_title">Our clothing, your comfort</h1>
-        		<p class="intro_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        		</p>
-        		<div class="intro_arrow"></div>
-        	</section>
-        	<section class="sorting">
-        		<div class="sorting_checkbox">
-        			<div for="" class="checkbox">
-        				<input type="checkbox" id="checkbox_men" class="checkbox_image" ng-model="filter['men']" >
-        				<label class="checkbox_label" for="checkbox_men">MEN</label>
-        			</div>
-        			<div for="" class="checkbox">
-        				<input type="checkbox" id="checkbox_women"  class="checkbox_image" ng-model="filter['women']">
-        				<label class="checkbox_label" for="checkbox_women">women</label>
-        			</div>
-        			<div for="" class="checkbox">
-        				<input type="checkbox" id="checkbox_child" class="checkbox_image" ng-model="filter['child']">
-        				<label class="checkbox_label" for="checkbox_child">childRobotoren</label>
-        			</div>
-        		</div>
-        		<button class="sorting_btn" ng-click="filter = {}" >see all prodRobotoucts</button>
-        	</section>
-        	<section class="products">
-        		<div class="products_list">
-        			<div class="products_list-item" type="{{item.type}}" ng-repeat="item in users | filter : filterByCategory">
-        				<div class="select">
-        					<div class="select_wrapper">
-		        				<select class="select_item">
-									<option value="" ng-repeat="size in item.options">{{size}}</option>
-		        				</select>
-	        				</div>
-        				</div>
-        				<a href="" class="products_list-link">
-        					<span class="products_list-image">
-        						<img src="img/{{item.img}}.png" alt="">
-        					</span>
-	        				<p class="products_list-bottom">
-	        					<span class="products_list-name">{{item.name}}</span>
-	        					<span class="products_list-price">{{item.price}}€</span>
-	        				</p>
-        				</a>
-        			</div>
-        		</div>
-        	</section>
-        	<section class="social">
-        		<a href="" class="social_link">
-        			<img src="img/twitter.png" alt="" class="social_img">
-        			<span class="social_text">“ E-commerce psd theme available ”</span>
-        		</a>
-        	</section>
+        <main class="main">
+            <h1 class="main_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+            <p class="main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quis modi labore iusto nulla rerum totam magni eos aliquid non ipsum rem sit, molestias sed nesciunt reprehenderit incidunt officiis, assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sit, non iure quisquam ratione natus voluptas id fugiat voluptatem, dignissimos unde, ullam necessitatibus praesentium excepturi amet ipsa. Beatae, quam, nostrum.</p>
+            <p class="main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quis modi labore iusto nulla rerum totam magni eos aliquid non ipsum rem sit, molestias sed nesciunt reprehenderit incidunt officiis, assumenda.</p>
+            <p class="main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quis modi labore iusto nulla rerum totam magni eos aliquid non ipsum rem sit, molestias sed nesciunt reprehenderit incidunt officiis, assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore recusandae aut tempora aliquam, officia, earum blanditiis assumenda. Alias eaque, ullam possimus ducimus cupiditate quam, nostrum similique quasi distinctio minima vel?</p>
         </main>
         <footer class="footer">
-        	<div class="footer_trekking">
-        		<h2 class="footer_title">Trekking</h2>
-        		<p class="footer_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        	</div>
-        	<nav class="footer_navigation">
-        		<ul class="footer_navigation-list" ng-controller="menuCtrl">
-					<li class="footer_navigation-item" ng-repeat="item in data.footerMenu">
-						<a href="{{item.link}}" name="{{item.name}}" class="footer_navigation-link">{{item.title}}</a>
-					</li>
-				</ul>
-				<p class="footer_copyright">Design by gianluca cosetta</p>
-        	</nav>
+			<p class="footer_copyright">© 2019 Test</p>
         </footer>
     </body>
 </html>
